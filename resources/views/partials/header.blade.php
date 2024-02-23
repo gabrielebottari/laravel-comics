@@ -2,38 +2,74 @@
     $links = [
         [
             'url' => '/',
-            'label' => 'Home',
-            'active' => true,
+            'label' => 'DC',
         ],
         [
-            'url' => '/chi-siamo',
-            'label' => 'Chi siamo',
-            'active' => true,
+            'url' => '/characters',
+            'label' => 'characters',
         ],
         [
-            'url' => '/contatti',
-            'label' => 'Contatti',
-            'active' => false,
+            'url' => '/comics',
+            'label' => 'comics',
+        ],
+        [
+            'url' => '/movies',
+            'label' => 'movies',
+        ],
+        [
+            'url' => '/tv',
+            'label' => 'tv',
+        ],
+        [
+            'url' => '/games',
+            'label' => 'games',
+        ],
+        [
+            'url' => '/collectibles',
+            'label' => 'collectibles',
+        ],
+        [
+            'url' => '/videos',
+            'label' => 'videos',
+        ],
+        [
+            'url' => '/fans',
+            'label' => 'fans',
+        ],
+        [
+            'url' => '/news',
+            'label' => 'news',
+        ],
+        [
+            'url' => '/shop',
+            'label' => 'shop',
         ],
     ];
 @endphp
 
 <header>
-    <nav>
-        <ul>
-            @foreach ($links as $link)
-                <li>
-                    @if ($link['active'])
+
+    <div class="container">
+        <div class="logo">
+            <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo" />
+        </div>
+        <nav>
+            <ul>
+                @foreach ($links as $link)
+                    <li class="h-100">
                         <a href="{{ $link['url'] }}">
                             {{ $link['label'] }}
                         </a>
-                    @else
-                        <del>
-                            {{ $link['label'] }}
-                        </del>
-                    @endif
-                </li>
-            @endforeach
-        </ul>
-    </nav>
+                    </li> 
+                @endforeach
+            </ul>
+
+
+        </nav>
+
+        <div class="d-flex align-items-center align-self-center border-5 border-bottom border-primary search-container">
+            <input class="border-white search-input" type="search" placeholder="Search" aria-label="Search"> <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+
 </header>
