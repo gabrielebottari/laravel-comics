@@ -56,3 +56,14 @@ Route::get('/', function () {
     $data = config('comics');
     return view('welcome',['data'=>$data]);
 });
+
+Route::get('/details/{id}', function ($id) {
+    $comics = config('comics');
+    $comic = collect($comics)->firstWhere('id', $id);
+
+    if (!$comic) {
+        return abort(404); // or a default view with an error message
+    }
+
+    return view('details', ['comic' => $comic]);
+})->name('details');

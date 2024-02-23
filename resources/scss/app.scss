@@ -119,6 +119,10 @@ header {
         .card {
             border: none;
             background-color: $secondary-color;
+
+            a{
+                text-decoration: none;
+            }
     
             .card-img-top{
                 height: 250px;
@@ -190,6 +194,101 @@ main {
     }
   }
 }
+
+.comic-details {
+
+    .blue-bar {
+      height: 80px;
+      background-color: $primary-color;
+    }
+  
+    .info-box {
+      position: relative;
+      padding: 0 120px;
+    }
+  
+    .top {
+      padding: 60px 0;
+  
+      .comic-img {
+        position: absolute;
+        top: -380px;
+        height: 300px;
+        width: 190px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 10px 6px rgba(0,0,0,0.4);
+  
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      h2 {
+        text-transform: uppercase;
+        color: #17AEDA;
+        margin-bottom: 20px;
+      }
+  
+      .price-bar {
+        background-color: #55ba59;
+        color: #c5f5bb;
+        margin-bottom: 18px;
+  
+        .left {
+          border-right: 1px solid white;
+          padding: 12px 25px;
+        }
+  
+        .right{
+          padding: 12px 0;
+  
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+  
+      .description {
+        color: rgb(86, 86, 86);
+        line-height: 1.5rem;
+        letter-spacing: 0.05rem;
+      }
+  
+      h6 {
+        color: rgb(86, 86, 86);
+      }
+  
+    }
+  
+  
+    .details-bottom {
+      padding: 28px 0 80px;
+      border-top: 1px solid rgb(225, 225, 225);
+  
+      h4 {
+        color: #17AEDA;;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgb(225, 225, 225);
+      }
+  
+      td {
+        font-size: 0.85rem;
+        color: #17AEDA;
+  
+        &.names,
+        &.series {
+          color: $primary-color;
+        }
+  
+        &.series {
+          text-transform: uppercase;
+        }
+      }
+    }
+  
+  }
 
 .footer-top {
     background-image: url("../img/footer-bg.jpg");
