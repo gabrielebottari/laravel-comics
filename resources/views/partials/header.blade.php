@@ -1,47 +1,47 @@
 @php
     $links = [
         [
-            'url' => '/',
+            'url' => '',
             'label' => 'DC',
         ],
         [
-            'url' => '/characters',
+            'url' => 'characters',
             'label' => 'characters',
         ],
         [
-            'url' => '/comics',
+            'url' => 'comics',
             'label' => 'comics',
         ],
         [
-            'url' => '/movies',
+            'url' => 'movies',
             'label' => 'movies',
         ],
         [
-            'url' => '/tv',
+            'url' => 'tv',
             'label' => 'tv',
         ],
         [
-            'url' => '/games',
+            'url' => 'games',
             'label' => 'games',
         ],
         [
-            'url' => '/collectibles',
+            'url' => 'collectibles',
             'label' => 'collectibles',
         ],
         [
-            'url' => '/videos',
+            'url' => 'videos',
             'label' => 'videos',
         ],
         [
-            'url' => '/fans',
+            'url' => 'fans',
             'label' => 'fans',
         ],
         [
-            'url' => '/news',
+            'url' => 'news',
             'label' => 'news',
         ],
         [
-            'url' => '/shop',
+            'url' => 'shop',
             'label' => 'shop',
         ],
     ];
@@ -66,18 +66,15 @@
         </div>
         <nav>
             <ul>
-                @foreach ($links as $link)
-                    <li class="h-100">
-                        <a href="{{ $link['url'] }}">
-                            {{ $link['label'] }}
-                        </a>
-                    </li> 
-                @endforeach
+            @foreach ($links as $link)
+                <li class="h-100">
+                    <a href="{{ url($link['url']) }}">
+                        {{ $link['label'] }}
+                    </a>
+                </li> 
+            @endforeach
             </ul>
-
-
         </nav>
-
         <div class="d-flex align-items-center align-self-center border-5 border-bottom border-primary search-container">
             <input class="border-white search-input" type="search" placeholder="Search" aria-label="Search"> <i class="fa-solid fa-magnifying-glass"></i>
         </div>
