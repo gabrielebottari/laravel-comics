@@ -19,29 +19,9 @@
 
         @include('partials.header')
 
-        <main>
-            <div class="container">
+        @include('partials.jumbotron')
 
-                <div class="row">
-
-                    <div class="col">
-
-                        <div>
-                            <img class="gatto-img" src="{{ Vite::asset('resources/img/gatto.webp') }}" alt="Gatto">
-                        </div>
-
-                        <div class="gatto-bg">
-                            QUESTO DIV AVRA' COME SFONDO IL GATTO
-                        </div>
-
-                        @yield('main-content')
-
-                    </div>
-
-                </div>
-
-            </div>
-        </main>
+        @include('partials.cta')
 
         @include('partials.footer')
 
