@@ -95,6 +95,61 @@ header {
     }
 }
 
+.bg-container {
+
+    background-color: $secondary-color;
+
+    .main-container {
+        position: relative;
+        color : white;
+        padding : 60px 0 20px;
+    
+        h1 {
+          position: absolute;
+          top: -25px;
+          left: 10px;
+          display: inline-block;
+          background-color : $primary-color;
+          color : white;
+          padding: 10px 25px;
+          font-size: 1.5em;
+          text-transform: uppercase;
+        }
+    
+        .card {
+            border: none;
+            background-color: $secondary-color;
+    
+            .card-img-top{
+                height: 250px;
+    
+            }
+    
+            .card-body{
+                height: 100px;
+            }
+        }
+    
+    
+      }
+    
+      .button-container {
+          display: flex;
+          justify-content: center;
+          padding-bottom: 20px;
+    
+          button {
+            color: white;
+            background-color: $primary-color;
+            border: none;
+            padding: 10px 50px;
+            text-transform: uppercase;
+          }
+        }
+}
+
+
+
 main {
     background-color: $primary-color;
   .container {
