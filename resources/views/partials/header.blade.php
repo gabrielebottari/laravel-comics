@@ -49,7 +49,18 @@
 
 <header>
 
+    <div class="bg-primary">
+        <div class="d-flex justify-content-end text-white p-1 top-header">
+            <div class="me-5">
+                DC POWER VISA
+            </div>
+            <div>
+                ADDITIONAL DC SITES <i class="fa-solid fa-caret-down"></i>
+            </div>
+        </div>
+    </div>
     <div class="container">
+
         <div class="logo">
             <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo" />
         </div>
